@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+        @font-face {
+            font-family: 'azurelo';
+            src: url('fontes/Blue Yellow.otf') format('opentype'), url('fontes/Blue Yellow.ttf') format('truetype');
+        }
+        
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            font-weight: bold;
+            font-style: italic;
+            text-align: justify;
+            background-image: linear-gradient(to right, #3061f2, #f20587);
+            
+        }
+        h1{/*É possivel condensar algumas configurações de fonte em um comando só, usando a tag font e colocando os valores na seguinte ordem: 1º font style, 2º font weight, 3º font size e por ultimo a font family, não sendo necessário colocar todos os itens, mas sim seguindo a ordem correta.*/
+            font: italic bold 4em "Great Vibes", "times", sans-serif;
+            text-decoration: underline;
+        }
+        h1#principal{
+            height: 100px;
+            width: 800px;
+            margin: auto;
+            text-align: left;
+            font-size: 5em;
+            background-image: linear-gradient(to left, #3061f2, #f20587); 
+            color: #f2f2f2;
+            border-radius: 5px;
+            text-decoration: none;
+            padding-top: 20px;
+        }
+        h2{
+            font: normal 2em 'azurelo', 'times', sans-serif;
+            text-decoration: underline;
+        }
+        p{
+            text-indent: 20px;
+            padding-right: 20px;
+        }
+        .subtitulo{
+            text-decoration: none;
+            font-size: 3em;
+            color: #f2f2f2;
+            border-radius: 5px;
+        }
+        .textodif{
+            color: #f2f2f2;
+            text-decoration: underline;
+        }
+        .textodif:hover{
+            color: #f20587;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .textodif::before{
+            content: '>';
+        }
+        .textodif::after{
+            content: '<';
+        }
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            color: #f2f2f2;
+        }
+        a:visited{
+            color: darkred;
+        }
+        a:hover{
+            color:#f20587;
+            text-decoration: underline;
+        }
+            
+        
+    </style>
+    <title>Fontes em CSS</title>
+</head>
+<body>
+    <h1 id="principal">Começando em CSS</h1>
+    
+    <h1>Trabalhando com fontes</h1>
+        <p>Para assegurar que qualquer dispositivo que for usado para abrir o site seja compativel com as fontes que estamos usando, precisamos adicionar o que chamamos de safe combinations, onde a sequencia de fontes colocadas no font family influencia na ordem em que as fontes serão usadas para serem compativeis com qualquer dispositivo, ou seja, nesse exemplo do style acima, primeiramente o dispositivo vai tentar usar uma fonte arial, se ele não tiver em seu banco de fontes uma arial, ele tentará usar a helvetica, se também não for possivel usar a helvetica, ele usara qualquer fonte desde que seja sem serifa, como foi determinado na ultima declaração. Essas safe combinations podem ser encontradas facilmente na internet é são muito uteis para evitar que algum dispositivo tenha dificuldade de abrir seu site.</p>
+        <h2>Tamanho das fontes</h2>
+            <p>Existem algumas medidas que são usadas para determinar o tamnho das fontes, entre elas estão:</p>
+            <dl>
+                <dt>Medidas Absolutas, que são:</dt>
+                <dd>cm, mm, in, px, pt, pc.</dd>
+                <dt>Medidas Relativas, que são:</dt>
+                <dd>em, ex, rem, vw, vh, %.</dd>
+            </dl>
+            <p>As medidas absolutas são mais propensas a terem problemas de representação em alguns tamanhos de tela, tendo algum tipo de distorção em certos dispositivos.</p>
+            <p>Já as medidas relativas são mais fáceis de se adaptarem ao tamanho da tela do dispotivo em que o site está sendo usado.</p>
+            <p>"em" representa o tamanho da fonte em relação ao tamanho atual da fonte levando em consideração o tamanho do M maiúsculo da fonte escolhida. "ex" representa basicamente a mesma coisa que "em", porem leva em consideração a altura da letra x minuscula da fonte escolhida. "rem" representa o tamanho da fonte levando em consideração o que foi definido no style do body. "vw" que significa viewwidth, ou seja, essa medida relativa leva em consideração a largura do viewport, que nada mais é que o tamanho da sua tela. "vh" que significa viewheight que faz a mesma coisa que o vw, mas leva em consideração a altura do viewport.</p>
+            <p>para os nossos projetos, seguiremos a recomendação da W3c que indicam o uso de "px" e "em" no font size. O padrão de font size dos navegadores geralmente é 16px, ou seja, se eu não adicionar nenhum font size ao meu estilo CSS, por padrão o valor será de 16px na maioria dos casos. Levando isso em consideração, pode se dizer que a medida relativa "em" é igual a 16px, ou seja, se eu adicionar ao meu estilo CSS um valor de font size 2em, é a mesma coisa que 32px, e assim sucessivamente, até mesmo para medidas decimais, como por exempo 0.5em, que representa 8px</p>
+    
+    <h1>Adicionando fontes ao projeto</h1>
+        <h2>Fonte externa via Google fonts</h2>
+            <p>Para adicionar fontes externas ao site usando a ferramenta do google fonts, é necessário uma conexão com a internet, ir até o site <a href="https://fonts.google.com/" rel="external" target="_blank">fonts.google.com</a>, escolher a fonte desejada, de preferencia uma fonte que tenha bastante opções de peso e estilo, escolher a opção embed no site e adicionar o link gerado em uma regra na tag style para que seja importada para a CSS, assim como nos exemplos que estamos fazendo e adicionar ao font family exatamente o estilo desejado.</p>
+        <h2>Fonte baixada e vinculada ao projeto localmente</h2>
+            <p>Para adicionarmos uma fonte que baixamos da internet ou recebemos via instruções do cliente, o processo é simples: adicionamos a fonte à pasta do projeto, nos formatos principais .otf ou .ttf e chamamos essas fontes para dentro do projeto atraves de uma regra universal, igual a de importação, que é @font-face, farei um exemplo para deixar registrado para futuras consultas. No campo src adicionamos o caminho da fonte na pasta, com o exato nome dela para não haver erros, no campo format() colocamos entre aspas o fomarto da fonte colocada no src, sendo os formatos: opentype para .otf, truetype para .tff, embedded-opentype, truetype-aat(Apple Advanced Typography) e svg. É possivel colocar mais de um formato da fonte para que a compatibilidade seja a maior possivel com todos os dispositivos, assim como fazemos com fotos, videos e audios, basta adicionar mais um src separado por virgula, vide exemplo. Na parte de font-family damos um nome para a fonte para que possamos adicionar ao codigo, assim como feito no exemplo nesta parte.</p>
+        <h2>Descobrindo quais fontes o site ou uma imagem usam</h2>
+            <p>É possivel descobrir quais fontes um site está usando apenas com uma extensão do google chrome chamada fonts ninja, basta instalar a extensão e utilizar para fazer a detecção.</p>
+            <p>Também é possivel descobrir qual fonte foi usada em uma arte gráfica utilizando alguns site disponiveis para isso, os mais recomendados são: what font is, o font squirrel e o my fonts. Basta acessar o site deseja, fazer o upload da imagem desejada e seguir os passos para detectar a fonte da imagem.</p>
+    
+    <h1>Tipos de alinhamento</h1>
+        <p>Utilizamos a função text-align para fazer o alinhamento de diversas formas, vermos mais a frente que formas são essas e temos um bonus de outra função chamada text-indent para fazer a indentação do paragraço, ou seja, a primeira linha do paragrafo ter aquele afastamento padrão da borda, um valor rasoavel para essa indentação parece ser em torno de 20px.</p>
+        <h2>Alinhamento à direita</h2>
+            <p>Para fazermos o texto se alinhar à direita, basta utilizar a palavra right ao na função text-align, indicando que o alinhamento deve ser feito à direita. Exemplo: text-align: right;</p>
+        <h2>Alinhamento à esquerda</h2>
+            <p>O alinhamento à esquerda segue o mesmo conceito que o metodo para direita, mudando apenas a palavra de referencia, que neste caso é left, esquerda em ingles indicando que o alinhamento deve ser feito à esquerda, o que basicamente já acontece por padrão no codigo caso nenhum alinhamento seja selecionado. Exemplo: text-align: left; </p>
+        <h2>Alinhamento ao centro</h2>
+            <p>Seguindo a mesma logica dos outros alinhamentos, o alinhamento ao centro se da utilizando a palavra center, centro em ingles, apos a função text-align. Exemplo: text-align: center;</p>
+        <h2>Alinhamento justificado</h2>
+            <p>E por ultimo, mas não menos importante, digamos até que seja o modo de alinhamento mais utilizado, temos o alinhamento justificado. Representamos essa forma de alinhamento adicionando a palavra justify, justificado em ingles, logo apos a função text-align. Exemplo: text-align: justify;</p>
+    
+    <h1>ATENÇÃO</h1>
+        <p>Tome cuidado para não esquecer do ponto e virgula ao final de cada delcaração em CSS, pois isso faz muita diferença, fazendo com que o código nem funcione.</p>
+    
+    <h1>Seletores Personalizados</h1>
+        <h2 class="subtitulo">Seletor id=" "</h2>
+            <p>Para diferenciarmos as configurações das tags HTML, podemos utilizar uma id na tag para darmos um atributo unico e assim formatar essa tag de forma diferente, exemplo: se eu tenho uma sequencia de 3 titulos com a tag h1, faço uma CSS para formatar essa h1 de derterminada forma, os 3 titulos receberão a mesma formatação em CSS, mas se por acaso eu quiser uma formatação diferente apenas para um titulo, eu coloco dentro da tag h1 a indicação de id, video o exemplo feito no titulo principal dessa pagina. ficaria mais ou menos assim &lt;h1 id="teste"&gt;Titulo principal que vai ser alterado separadamente &lt;/h1&gt;</p>
+            <p>Na configuração da CSS, para identificarmos esse h1 diferente, que possui uma id, temos duas formas: a primeira, escrevemos o h1 para identificar que é uma tag de titulo, e colocamos uma hashtag com o nome da id escolhida, nesse caso colocamos o nome de teste. Fica assim: h1#teste {dentro das chaves fica a formatação normal como em qualquer outro seletor, colando aqui as diferenças dos outros h1 que desejamos}. A segunda forma é exatamente igual a primeira, apenas sendo opcional colocar a identificação do seletor antes da hastag, ficando assim #teste{aqui a formatação padrão}. Pode ser mais facil fazer como na primeira demosntração, juntamente com o seletor, para ficar mais facil de entender a que se refere aquela tag, mas fica a criterio de quem esta programando.</p>
+        <h2>Importante</h2>
+            <p>É necessario ter cuidado com a escrita do nome na id, pois se houver alguma divergencia entre os nomes no HTML e na CSS, a formatação não irá funcionar, pois o código não identificará a id corretamente.</p>
+            <p>Em HTML o que é id é representado com # em CSS e o que é class em HTML é representado com ponto (.).</p>
+            <p>Por norma da W3C, só podemos usar 1 id para um único elemento, o que significa que não podemos ter dois elementos com um mesmo id dentro de uma mesm página, mas é possivel colocar id para outros elementos desde que não se repitam, ou seja, se eu tenho um h1 com id principal, eu não posso usar outro h1 com a mesma id, mas posso criar outra id para o outro h1, por exemplo id="secundario".</p>
+        <h2 class="subtitulo">Seletor class=" "</h2>
+            <p>Assim como o seletor id, o class serve para podermos dar uma identificação à uma classe, mas a grande diferença é que podemos usar esse seletor em vários outros elementos da mesma classe, por exemplo, se eu tenho um h2 com seletor class chamado principal, eu posso colocar esse seletor em varios outros h2 para tranformar eles em principal e receber a formatação diferente do h2 generico. Também é possivel mudar um pedaço de texto usando o seletor class, juntamente com a tag span, <span class="textodif">tambem farei um exemplo nessa parte do texto</span>. Resumindo, o seletor class nos dá mais possibilidades para usarmos varios elementos com a mesma formatação diferenciada que criamos.</p>
+            <p>Diferente do id, usamos um ponto (.) para chamar uma class no codigo CSS, juntamente com o nome da classe que desejamos adicionar uma formatação. Não é necessario colocar o nome da tag antes do ponto, mas assim como na id também é possivel.</p>
+            <p>É possivel colocar 2 ou mais classes no mesmo elemento, ou seja, posso colocar um h1 com class="principal basico aternativo" sendo principal, basico e alternativo nomes de classe já criadas no codigo CSS, as classes só precisam serem separadas por espaço, assim como feito no exemplo, não sendo necessário virgula. Também é possivel colocar uma class juntamente com um id, e da mesma forma, podemos colocar várias classes junto, por exemplo h1 id="tal" class="talqual fulano ciclano"</p>
+        <h2 class="subtitulo">Hierarquia dos elementos e seletores</h2>
+            <p>Há uma heraiquia a ser observada na utilização de seletores, onde o h1 mais generico é o ultimo ponto a ser levado em consideração, ou seja, se eu criar uma class e adicionar a ela um font size, se o elemento que receber essa tag for um h1, o font size sera definido pelo que esta no class. Se eu criar uma formatação generica h1 e não colocar a class nesse h1, ele recebera o font size da formatação generica. Não é muito dificil entender a herarquia, é algo muito natural, mas caso haja duvidas, consultar esse <a href="https://www.youtube.com/watch?v=zXfTjPrMC_0&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=20" target="_blank" rel="external">vídeo aqui</a>.</p>
+        <h2 class="subtitulo">Pseudo-classes</h2>
+            <p>As pesudo-classes são representadas com dois pontos (:) e são relacionadas ao estado de um determinado elemento, <span class="textodif">como o exemplo acima que foi usado a pseudo classe :hover, que significa a mudança de estado do elemento no momento em que é passado o mouse em cima desse elemento.</span>. A pseudo-classe visited altera o estado de um elemento caso ele tenha sido acessado, como no caso de um link, a pseudo-classe active altera o estado do elemento caso ele tenha sido ativado, como por exemplo atraves de um clique do mouse.</p>
+            <p>Existem diversos tipos de pseudo-classes, provavelmente mais para frente veremos mais a fundo essa parte</p>
+        <h2 class="subtitulo">Pseudo-elementos</h2>
+            <p>Pseudo-elementos tem a capacidade de alterar o conteudo html do elemento selecionado, por exemplo, se eu tiver um, paragrafo (p) com varias coisas escritas, mas quis adicionar algum caracter ou outro conteudo sem alterar o codigo html e tambem abrangir todos os elementos com a tag p, eu faço uma class ou id e adiciono um pseudo-elemento, tendo diversas possiblidade de localização, como antes, depois e afins, segue o exemplo: p::after{ content: '<'} isso indica que todo paragrafo tera o simbolo dentro do content apos o final do paragrafo.</p>
+        <h2 class="subtitulo">Direct Child</h2>
+            <p>indicado pelo simbolo maior que (>) refere-se a uma alteração especifica de um elemento que esteja dentro de outro, por exemplo, se eu tiver uma div e dentro dessa div um paragrafo, para alterar via CSS esse paragrafo eu utilizo div > p {formatação desejada} e isso só alterará todo paragrafo que estiver dentro de uma div, e não todos os outros globalmente.</p>
+
+
+
+    
+
+
+
+</body>
+</html>

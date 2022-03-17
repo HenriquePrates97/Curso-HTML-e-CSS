@@ -1,0 +1,12 @@
+Módulo 1 aula 10
+Front-end, Back-end e Full stack
+
+Tecnologías como JS, HTML e CSS são utilizadas do lado no cliente, na rede de internet, por isso são denominadas front-end
+Quem trabalha com front-end, não necessáriamente precisa ser designer. As funções são somadas, ou seja, um designer faz a parte visual e de como o site precisa ficar
+e o desenvolvedor front-end executa isso usando as tecnologias necessárias, com as que estamos estudando aqui. É necessário um certo conhecimento em tipográfia, em escolha
+de cores, softwares de edição de imagem, mas não precisa ser profissional nisso, e sim um certo conhecimento para acompanhar o designer
+
+back-end é a parte do servidor, necessário conhecimento em outras tecnologias como php, JS (diferente da usada no front-end), C-sharp, python, ruby e java, 
+mas se complementam com o front-end
+
+Full stack é a especialização tanto em front-end quando em back-end, e demanda bastante experiência, determinação e dedicação.

@@ -1,0 +1,12 @@
+módulo 1 aula 8
+o que é dominio e hospedagem?
+
+domínio = é o nome único de um site e não precisa de muito cuidados pra escolher
+hospedagem = é onde o site é armazenado e tem que prestar atenção nos recursos
+TLD = Top Level Domains
+GTLD = Generic Top Level Domain (.com .gov .tv .io)
+CCTLD = Country Code Top Level Domain (.br .uk .us .ar)
+URL = Uniform Resource Locator serve pra apontar em uma localização especifica num servidor
+o que vem antes do domínio é denominado sub-domínio
+
+

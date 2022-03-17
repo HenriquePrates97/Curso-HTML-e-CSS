@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Modelo de caixas</title>
+</head>
+<body>
+    <h1>O que são caixas em HTML?</h1>
+        <p>Tudo o que é exibido na tela atraves de um documento HTML é considerado uma caixa, as caixas podem ser colocadas uma dentro da outra, formando um aninhamento. Quando digitamos algo em HTML, ele é mostrado em forma de caixa, e existem alguns tipos de formas de caixa que veremos mais pra frente. Sempre que formatamos um elemento com CSS, estamos na verdade alterando a caixa que esse elemento criou. As caixas tem um tamanho especificados em duas medidas: height (altura em ingles) e width (largura em ingles). Podemos também definir uma linha ao redor dessa caixa, que chamamos de border (borda em ingles), para distanciar a borda do conteudo dentro da caixa utilizamos o padding, e para distanciar o que está fora da caixa utilizamos uma margin (margem em ingles).O margin também é utilizado para centralizar a caixa à pagina, utilizando o comando auto, ficando assim margin: auto;. Entre a borda e a margem, podemos adicionar uma outline na formatação.</p>
+    <h1>Tipos de caixa</h1>
+        <h2>Box-level</h2>
+            <p>Caixas do tipo box-level sempre pulam a linha para começar a caixa, mesmo que haja espaço, e ocupa a largura total da tela e o proximo conteudo é jogado para a linha de baixo. Exemplos de tag que são do tipo box-level:</p>
+                <ul>
+                    <li>div    </li>
+                    <li>h1-h6  </li>
+                    <li>p      </li>
+                    <li>main   </li>
+                    <li>header </li>
+                    <li>nav    </li>
+                    <li>article</li>
+                    <li>aside  </li>
+                    <li>footer </li>
+                    <li>form   </li>
+                    <li>video  </li>
+                </ul>
+        <h2>Inline-level</h2>
+            <p>As caixas do tipo inline-level se mantem na mesma linha caso haja espaço e não ocupam a largura inteira da tela, o conteudo pode continuar ao lado da caixa inline. Exemplos de tags do tipo inline-level:</p>
+                <ul>
+                    <li>span   </li>
+                    <li>a      </li>
+                    <li>code   </li>
+                    <li>small  </li>
+                    <li>strong </li>
+                    <li>em     </li>
+                    <li>sup-sub</li>
+                    <li>lebel  </li>
+                    <li>button </li>
+                    <li>input  </li>
+                    <li>select </li>
+                </ul>
+        <h2 class="transformBox">Transformando caixas</h2>
+            <p>Caixas do tipo inline-level não tem configurações de height e width como os modelos box-level tem, assim como os modelos de box-level obrigatoriamente pulam uma linha antes e depois para continuar o conteudo. Existem outras caracteristica marcantes que diferenciam um modelo box de um modelo inline. E se precisarmos mudar a altura e largura de um modelo inline, é possivel? Se precisarmos manter um modelo box na mesma linha do conteudo? É possivel transformar os tipo de caixa para adequar ao uso desejado, e isso fazemos na formatação do elemento na CSS. Por exemplo, se eu quiser transformar um h1 que é do tipo box em tipo inline, na formatação do estilo h1 em CSS , escrevo o seguinte código: h1 {display: inline;} e se desejar tranformar uma tag "a" em box declaro na CSS: a{display: block;}. E se desejar que um elemento tenha as duas caracteristicas, tanto box quanto inline, declaro na CSS o seguinte: {display:inline-block}</p>
+    <h1>Exemplos</h1>
+            <p>Paragrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona</p>
+    <h1>Shorthands para as formatações</h1>
+        <h2>Padding</h2>
+            <p>Para formatarmos o padding de uma caixa, temos que seguir a seguinte configuraçãos:</p>
+                <ul>
+                    <li>padding-top: px;   </li>
+                    <li>padding-right: px; </li>
+                    <li>padding-bottom: px;</li>
+                    <li>padding-left: px;  </li>
+                </ul>
+            <p>Para fazermos uma shorthand, ou seja, uma compactação desse codigo em apenas uma linha, utilizamos apenas a palavra padding e apos os dois pontos, colocamos os valores desejados, e os valores precisam obrigatóriamente seguir a sequencia acima, onde começa com o padding de cima, depois o padding da direita, depois o padding de baixo e por ultimo o padding da esqueda. Para ficar mais facil de lembrar a sequencia, basta lembrar do sentido horario do relogio, começando às 12h e seguindo o ponteiro no sentido horário.</p>
+                <ul>
+                    <li>padding: px px px px;</li>
+                </ul>
+            <p>Outra forma de fazer essa mesma compactação é caso os padding do topo e de baixo tenham o mesmo valor e o da direita e esquerda tambem tenham o mesmo valor, sendo necessario colocar apenas dois valores apos o padding. O primeiro valor do padding de cima e de baixo e o segundo valor do padding da direita e da esquerda, seguindo obrigatoriamente essa sequencia de formatação.</p>
+                <ul>
+                    <li>padding: px px;</li>
+                </ul>
+            <p>A ultima forma de compactar a formatação do padding é colocando apenas um valor que será para todos os lados, ou seja, topo, direita, baixo e esquerda terão a mesma quantidade de espaçamento da borda</p>
+                <ul>
+                    <li>padding: px;</li>
+                </ul>
+        <h2>Margin</h2>
+            <p>Assim como o padding, o margin também segue uma sequencia de formatação que vai de top, para right, bottom e left.</p>
+                <ul>
+                    <li>margin-top: px;   </li>
+                    <li>margin-right: px; </li>
+                    <li>margin-bottom: px;</li>
+                    <li>margin-left: px;  </li>
+                </ul>
+            <p>A sequencia também é determinada pelo sentido horario, começando às 12h e deve ser seguida para as compactações. Então, se tivermos valores diferentes nas 4 posições do margin, faremos a shorthand dessa forma:</p>
+                <ul>
+                    <li>margin: px px px px;</li>
+                </ul>
+            <p>Se os valores do margin coinciderem apenas em top e bottom e apenas em right e left, fazemos dessa maneira, sendo o primeiro numero referente ao top e bottom e o segundo numero referente a right e left:</p>
+                <ul>
+                    <li>margin: px px;</li>
+                </ul>
+            <p>E se todos os valores forem iguais formatamos com apenas um número indicando que os 4 lados do margin são iguais</p>
+                <ul>
+                    <li>margin: px;</li>
+                </ul>
+            <p>DICA IMPORTANTE: para centralizar uma box à pagina, utilizamos a formatação margin: auto; isso fará com que a box fique no centro da tela, diferentemente da centralização de um texto que esta dentro da box, que utilizamos text-align: center; para isto. Sendo assim, é possivel centralizar a box à pagina e deixarmos um texto alinhado à esqueda ou direita dentro da box, vide exemplo no style local da pagina fontes.</p>
+        <h2>Bordas</h2>
+            <p>Para as bordas, temos alguns parametros de formatação que são mais usados, como por exemplo o border-width, o border-style, o border-color, border-radius entre outros. Para compactar a formatação de border, escrevemos apenas a palavra e colocamos os valores de largura, o estilo da borda (solid, dashed, dotted, groove) e a cor da borda nessa sequencia.</p>
+                <ul>
+                    <li>border-width: px;     </li>
+                    <li>border-style: solid;  </li>
+                    <li>border-color: blue;   </li>
+                    <p>Compactado</p>
+                    <li>border: px solid blue;</li>
+                </ul>
+            <p>Usando o conceito de direcionamento da borda, podemos fazer borda apenas no topo, na direita, em baixo ou na esquerda, ou fazer misturas, como borda na direita e embaixo, enfim, como precisarmos. Apenas temos que indicar na formatação qual a posição da borda:</p>
+                <ul>
+                    <li>border-top: px solid blue;</li>
+                    <li>border-right: px solid black;</li>
+                    <li>border-bottom: px solid violet;</li>
+                    <li>border-left: px solid white;</li>
+                    
+                </ul>
+            <p>Para arredondarmos os cantos da borda, também temos uma série de parametros que podemos usar, sendo a configuração similar ao do margin.</p>
+                <ul>
+                    <li>border-top-left-radius: px; (para arredondar o vertice de cima do lado esquerdo)    </li>
+                    <li>border-top-right-radius: px; (para arredondar o vertice de cima do lado direito)    </li>
+                    <li>border-bottom-right-radius: px; (para arredondar o vertice de baixo do lado direito)</li>
+                    <li>border-bottom-left-radius: px: (para arredondar o vertice de baixo do lado esquerdo)</li>
+                    <p>Forma compactada onde juntamos os valores de top left com bottom right e top right com bottom left</p>
+                    <li>border: 10px 20px;</li>
+                    <p>Forma compactada onde todos os vértices tem o mesmo valor</p>
+                    <li>border: px;       </li>
+                </ul>
+        <h2>outline</h2>
+            <p>Para a formatação do outline, que é a linha entre a margem e a borda, também temos alguns parametros que também podem ser compactados, semelhante como foi feito com as bordas e também seguindo a mesma sequencia mostrada</p>
+                <ul>
+                    <li>outline-width: px;       </li>
+                    <li>outline-style: dashed;   </li>
+                    <li>outline-color: black;    </li>
+                    <p>compactado</p>
+                    <li>outline: px dashed black;</li>
+                </ul>
+    <h1>Tags de agruapamento</h1>
+        <p>Para organizarmos melhor as informações no nosso site, existem algumas tags que ajudam nessa organização e deixam o código mais limpo e fácil de serem alcançados por buscadores na internet. Essas tags tem uma semantica, pois indicam básicamente o que está sendo colocado na tag, por exemplo, temos a tag header, que significa cabeçalho em ingles, nela podemos colocar tudo o que é referente à parte de cabeçalho do nosso site, ajudando na organização e facilitando muito a formatação do estilo em CSS. Em HTML4, era mais comum o uso da tag div para englobar todas essas inforçações, mas com o avanço da linguagem e a facilidade de o site ser encontrado por buscadores traz uma vantagem a mais ao usar os conteudos agrupados por tags de agrupamento. Além, claro, do que ja foi mencionado sobre organização e formatação. Ainda é possivel utilizar a tag div para fazer algumas coisas pontuais no codigo, não caiu em desuso e muito menos ficou obsoleta. Isso também vale para a tag span, que também era muito utilizada por ser um modelo inline o que facilitava a codificação de alguns elementos. </p>
+        <p>As principais tags semanticas de agurapamento são:</p>
+            <ul>
+                <li>header (cabeçalho)                                                                     </li>
+                <li>main (principal, geralmente engloba todo conteudo principal do site)                   </li>
+                <li>footer (rodapé)                                                                        </li>
+                <li>nav (navegação, geralmente usada para fazer menus)                                     </li>
+                <li>section (para dividir sessões em um site)                                              </li>
+                <li>article (para os artigos que estarão no site)                                          </li>
+                <li>aside (para coisas referente ao artigo, como por exemplo a nomeação do autor do artigo)</li>
+            </ul>
+        <p>Por ser uma linguagem voltada à semantica, é possivel notar que as tags basicamente fazendo aquilo que o nome delas indicam, por exemplo, nas tag footer colocamos tudo o que está relacionado ao rodapé do nosso site, como por exemplo por quem foi desenvolvido, informações de endereço da empresa, cnpj, canal de contato, parceiros da marca, selos de certificação, entre outras possibilidades. E não significa que temos que usar uma coisa dentro da outra obrigatoriamente, somos livres para, dentro dos limites da tag body, adicionar o que bem entedermos para organizar o nosso codigo e tirarmos nosso site do papel.</p>
+    <h1>Sombras nas caixas</h1>
+        <p>Para criar uma sombra nas caixas utilizamos o comando box-shadow, e adicionamos alguns parametros para configuração da sombra, parametros esses que são, por ordem de colocação: a palavra inset, para determinar se a sombra é dentro da caixa, se for fora da caixa, o que é mais comum, não colocamos nada no primeiro parametro; segundo paramentro é a quantidade de pixels que a sombra vai se deslocar horizontalmente; terceiro parametro é a quantidade de pixels que a sombra vai se deslocar verticalmente; quarto parametro é a quantidade de blur (embaçamento) que a sombra terá, também escrita na medida de pixels, o quinto parametro é a quantidade de spread (espalhamento) que a sombra terá, também em pixels e por ultimo, a cor da sombra.</p>
+        <p>Existem algumas dicas para o melhor aproveitamento das sombras, a primeira dica é sempre usar uma sombra na cor preta, a segunda dica é sempre manter a transparencia dessa cor da metade pra baixo, passando o mouse em cima da cor, mexer na barrinha de transparencia para regular de acordo com a dica. Existe uma maneira de criar um box-shadow usando o Dev Tools do Chrome, basta ter uma formatação em CSS criada para o elemento desejado, ir até o elemento que quer colocar a sombra, passar o mouse sobre os 3 pontinhos que apareceu e selecionar box-shadow e fazer a configuração desejada, então copiar o codigo gerado pela ferramenta e adicionar à formatação CSS</p>
+
+            
+</body>
+</html>

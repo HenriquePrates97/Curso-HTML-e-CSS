@@ -1,0 +1,6 @@
+Para adicionar o icone que fica à esquerda do titulo do site na aba da janela do navegador, é necessário, primeiro, escolher o icone desejado
+de preferência na extensão .ico e adicioná-lo à pasta que está o código, levando em consideração o que foi aprendido na aula anterior de como 
+colocar imagens no código.
+Em seguida, no seu código html, a linha a ser adicionada para colocar o icone pode ficar acima do <title></title> e para fazer a chamada do codígo
+é só digitar link e selecionar a opção link:favicon e apertar enter que o código será gerado automaticamente. O local para colocar o caminho da imagem
+é no campo entre as aspas de href, o restante da linha de código não precisa ser alterada até o momento.

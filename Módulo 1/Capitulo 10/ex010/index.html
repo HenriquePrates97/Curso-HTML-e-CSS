@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>
+        Você pode acessar meu <a href="https://gustavoguanabara.github.io">repositório publico no GitHub.</a>
+        <br>Para criar um link, envelopa-se (seleciona o texto, ctrl+shift+p, quebrar linha com abreviação) e adiciona a tag a, onde o link completo
+        precisa estar dentro do termo href.
+    </p>
+    <p>
+        Você também pode acessar o meu <a href="https://youtube.com/cursoemvideo/" target="_blank" rel="external">canal gratuito no YouTube</a>. <!--
+            comando target="_blank" serve para abrir o link em uma nova aba, para que o meu site não seja perdido durante a navegação do usuário. Já o
+            rel="external" serve para indicar que o link utilizado é externo
+        -->
+    </p>
+    <h1>Usando links internos</h1>
+    <p>
+        Esta é a pagina 1 do site, se você quiser ir para a pagina 2 é só <a href="pag002.html" rel="next">clicar aqui</a>
+    </p>
+    <p>
+        Você também pode acessar a página de notícias do site <a href="noticias/pag003.html" rel="next">clicando aqui</a>.
+    </p>
+    <h1>Links para download</h1>
+    <ul>
+        <li><a href="livro/10 - Ligações em toda parte.pdf" download="10 - Ligações em toda parte.pdf" type="application/pdf">Link para o PDF</a></li>
+        <li><a href="livro/10 - Ligações em toda parte.rar" download="10 - Ligações em toda parte.rar" type="application/rar">Link para o PDF compactado em rar</a></li>
+    </ul>
+    <p>Para fazer download é necessário ter o arquivo dentro da pasta do site, coloca-lo dentro da tag a, no parametro download colocar o nome correto do arquivo
+    e no parametro type é necessário colocar o tipo de midea do arquivo, que no caso de pdf é application/pdf. A lista com todos os tipos de mídia é
+    encontrada no site <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external">iana.org</a>
+    </p>
+</body>
+</html>

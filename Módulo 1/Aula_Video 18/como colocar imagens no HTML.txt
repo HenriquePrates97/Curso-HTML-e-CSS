@@ -1,0 +1,6 @@
+Para adicionar uma imagem ao código HTML, utiliza-se a tag img: <img src="link da imagem" alt="texto alternativo">
+O que significa cada parte do código?
+img -> é o que indica que será feita a adição de uma imagem ao código
+src -> abreviação de source, é o caminho onde está localizada a imagem, pode ser na mesma pasta do código, em uma pasta dentro da pasta do código ou um endereço na web. s
+utilizado um endereço na web, caso esta imagem seja retirada deste site, a imagem do código também se perderá.
+alt -> abreviação para alternative, é o texto alternativo para caso a imagem não apareça ou informa ao que a imagem se refere para o site.

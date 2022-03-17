@@ -1,0 +1,54 @@
+Módulo 1 aula 9
+A diferença entre HTML, CSS e JavaScript
+
+HTMl = HyperText Markup Language / HyperTexto usado para fazer links Markup é marcação para esse hypertexto
+CSS = Cascading Style Sheets / Folhas de Estilo em Cascata
+
+HTML é o conteúdo das paginas, que incluem textos, imagens, vídeos, tabelas, entre outros.
+CSS é usado para o design das páginas, cores, sombras, tamanhos, posicionamento.
+JavaScript são as interações dos sites como menus, pop ups, animações, validações.
+
+Exemplo de conteúdo em HTMl:
+
+abertura    conteúdo     fechamento
+<h1> exemplo de titulo </h1>
+
+abertura   conteudo      fechamento
+<p> exemplo de paragrafo </p>
+
+
+<img src="foto.png" alt="Exemplo de foto">
+img = tag para chamada de imagem no código
+src = (parâmetro da tag) sigla para source, procura o endereço da imagem
+alt = (parâmetro da tag) texto alternativo para caso a imagem não possa ser mostrada.
+O que está dentro de aspas é chamado de Valor
+
+
+Estilo em CSS
+
+seletor
+ h1{ ---declaração---
+    font-family: Arial;
+    font-size: 20pt;
+    color:blue;
+   }
+dentro da declaração, há a propriedade (font-size, font-family, color) e os valores (Arial, 20pt, blue)
+toda declaração em CSS tem que ter ponto e virgula (;) no final.
+
+
+Estutura Básica de um documento HTML
+
+
+<!DOCTYPE html> = para informar ao navegador que a página será desenvolvida em HTML 5
+
+<html lang="pt-br"> abertura do corpo do html com parâmetro para dizer que o conteúdo será em pt-br
+  <head> cabeçalho é a área de configurações
+    <meta charset="UTF-8"> essa linha significa que o site será compativel com caracteres do padrão UTF-8, como acentos e cedilha
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0"> o site ira ocupar 100% da parte branca e será vizualizado numa escala de 100%
+    <title> Documento </title> título que aparecerá na aba do navegador
+  </head>
+  <body> o restante do do conteúdo será feito aqui
+   <h1> Olá, mundo! </h1>
+  </body>
+</html> fechamento do corpo do html

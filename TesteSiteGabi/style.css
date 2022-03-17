@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&display=swap');
+@font-face {
+    font-family: 'khblackline';
+    src: url('fontes/KH-Blackline-Script-Medium.otf') format('opentype'), url('fontes/KH-Blackline-Script-Medium.ttf') format('truetype');
+}
+:root{
+    /*Cores*/
+    --roxo:#a648f7;
+    --verde: #63e572;
+    /*Fontes*/
+    --padrao: 'Averia Serif Libre', 'Times New Roman', Times, serif;
+    --cursiva: 'khblackline';
+}
+*{
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    font-family: var(--padrao);
+}
+body{
+    background-color: darkgray;
+}
+body > img{
+    max-width: 100%;
+}
+main{
+    max-width: 850px;
+    margin: auto;
+}
+section p{
+    margin: 0px 0px 20px 0px;
+}
+header > a > img{
+    width: 250px;
+}
+
+.florJuntos{
+    display: block;
+    width: 700px;
+    margin: auto;
+}
+header{
+    background-color: var(--roxo);
+}
+nav{
+    min-height: 25px;
+    max-width: 530px;
+    margin: 0px 30px 0px auto;
+    padding-bottom: 50px;
+}
+nav > a{
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+dl{
+    color: white;
+    background-color: var(--roxo);
+}
+dt{
+    margin-left: 40px;
+}
+dd{
+    margin-left: 40px;
+    max-width: 190px;
+}
+.divDireitaSobre{
+    height: 450px;
+    width: 300px;
+    background-color: var(--roxo);
+    text-align: right;
+    padding: 10px;   
+    color: white;
+    margin-left: auto;
+    margin-right: 0px;
+}
+.divDireitaSobre > p{
+    margin-right: 5px;
+    text-align: right;
+}
+.divEsquerdaSobre{
+    height: 450px;
+    width: 300px;
+    background-color: var(--roxo);
+    text-align: left;
+    padding: 10px;   
+    color: white;    
+}
+.divEsquerdaSobre > p{
+    margin-right: 5px;
+    margin-top: 60px;
+}
+div > h1{
+    font-weight: bold; 
+    font-size: 2em;
+    margin-right: 5px;
+}
+div > p{
+    margin-right: 5px;
+}
+main h1{
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+footer > img{
+    max-width: 180px;
+}
+footer{
+    background-color: var(--verde);
+}
+footer > p{
+    font: bold 2.5em var(--cursiva);
+    max-width: 200px;
+    margin: 0px 300px 0px auto;
+}

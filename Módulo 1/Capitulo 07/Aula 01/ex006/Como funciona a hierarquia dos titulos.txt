@@ -1,0 +1,13 @@
+Headings, em portugues titulos, são criados no código HTML utilizando a letra h juntamente com o número do nível daquele titulo, cujo qual iremos falar mais adiante. 
+Ficando dessa forma: <h1></h1> para titulos de nivel 1, o mais alto na hierarquia
+Para titulos de nível 2, utiliza-se dessa maneira: <h2></h2>, o segundo na herarquia,
+seguindo assim, sucessivamente, até o nível 6, que é o mais baixo.
+E como se define o nivel do titulo?
+Geralmente o titulo mais alto é aquele que colocamos primeiro e está mais em destaque no nosso texto, aquele que define sobre o assunto que está sendo tratado dentro
+daquele texto. Este titulo estará sempre dentro do h1, há uma lenda onde dizem que um texto deve conter apenas um h1, mas é somente mito, se o texto necessitar de mais um h1,
+pode ser usado sem problema algum.
+Seguindo com o próximo nivel, o h2, este já seria melhor como um subtitulo do titulo principal, indicando o inicio de um desenvolvimento sobre o assunto do titulo principal.
+E assim segue sucessivamente, com esta linha de raciocinio, onde o h3 seria um sub titulo de algo que esta no titulo h2, o h4 seria um sub titulo do que está no h3...
+Não utiliza-se da diferenciação de tamanho de fontes que acontece em cada h para diminuir ou aumentar o tamanho da fonte dentro do texto. Ou em outras palavras,
+por padrão o h1 será mostrado na página com um tamanho de fonte maior do que o h2, se você precisar que o que está escrito em h2 seja de um tamanho de fonte maior que o h1,
+não deve-se utilizar h1 em um titulo h2 para este fim. As CSS, que vamos aprender mais pra frente, é quem farão este processo de estilização da fonte.

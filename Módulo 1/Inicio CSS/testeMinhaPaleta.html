@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formas de representar cores em CSS</title>
+</head>
+<body>
+    <h1>Como representar as cores em CSS?</h1>
+    <p>As cores no código CSS podem ser representadas de diversas maneiras, veja abaixo as principais formas de conseguir codificar a cor desejada para o seu projeto</p>
+    <h2>Representação por nomes</h2>
+    <p>Essa forma de codificação consiste em escrever (em ingles) propriamente o nome da cor desejada no codigo CSS, como por exemplo: se eu quero uma cor branca, escrevo white, ou se quiser azul, escrevo blue. Veja como fica na forma inline do CSS nesse parágrafo. Porém há uma desvantagem muito grande nesse método, que é a baixa quantidade de opções dispooniveis de cores e a falta de ajuste fino para conseguir um tom um pouco mais fraco ou forte de determinada cor. </p>
+    <h2>Representação por código hexadecimal</h2>
+    <p>Códigos hexadecimais são muito utilizados na computação por darem uma gama muito grande de combinações de algarismos, sendo assim, representar as cores utilizando codigos hexadecimais proporciona uma forma muito mais precisa e muito mais possiblidades de chegarmos a uma cor especifica. Para tal representação, utilizamos uma hashtag (#) antes da combinação de 6 números do código (#xxxxxx). E o que esses numeros apos a hashtag representam? Por que eles se tornam cores a final? Cada par de numeros representa uma posisão na escala RGB, sendo assim, os dois primeiros numeros são a quantidade de vermelho (red) que há na cor desejada, sendo 00 nenhuma presença de vermelho e FF a presença total de vermelho na cor; os dois numeros ao meio representam a quantidade de verde (green) presente na cor, sendo 00 nenhuma presença e FF a presença total, e os dois ultimos numeros são a quantidade de azul (blue) presentes na cor e atuam da mesma maneira que as outras: 00 para nenhuma presença de azul e FF para total presença. Veja o exemplo nesse paragráfo onde usarei o metodo inline de CSS para demonstrar a representação hexadecimal de cores. Também é possivel adicionar um segundo par de combinações ao codigo hexadecimal para adicionar transparencia a essa cor, que vai de 00 a ff, sendo 00 para total transparencia na cor e ff para nenhuma trasparencia. Nessa caso, o código fica assim #xxxxxxxx</p>
+    <h2>Representação pelo código decimal da escala RGB.</h2>
+    <p>Um terceiro método, também é utilizado para representar as cores no codigo CSS, metodo esse muito similar ao hexadecimal, mas neste metodo usamos a escala rgb em sua formal decimal, representada por numeros que vão do 0 ao 255, sendo 0 nenhuma presença de cor e 255 presença total de cor, assim como no hexadecimal. As diferenças entre um método e outro são, primeiramente a forma da representação dos algarismos e a segunda é a forma da representação no código. Para representar uma cor usando esse método, escrevemos as letras rgb e entre parenteses colocamos a sequencia dos numeros separados por virgula, exemplo rgb(255,255,255). Cada numero novamente representa uma posição na escala rgb, sendo assim, o primeiro numero significa a quantidade de vermelho (red) na cor, o segundo numero a quantidade de verde(green) e o terceiro a quantidade de azul (blue). Veja o exemplo deste paragrafo onde uso o metodo inline de CSS para mudar a cor deste texto usando a representação RGB. Assim como o metodo hexadecimal, também é possivel adicionar transparencia a cor pelo codigo RGB, mas há algumas diferenças, a primeira é que em vez de usar apenas rbg para iniciar o código, utiliza-se rgba, sendo o "a" (alpha) para indicar a transparencia, e a representação numerica vai se 0 até 1, exemplo: rgba(255,180,255,0.500)</p>
+    <h2>Representação por Matiz, Saturação e Luminosidade (Hue,Saturation,Luminosity)</h2>
+    <p>Existe essa forma também de representação, mas não compreendi muito bem e não acho que tenha necessidade de usar sendo que existem outras que fazem a mesma coisa e foram mais fáceis de entender, contudo, a representação de codiigo dela caso seja necessário algum dia é hsl(140, 100%, 50%). Se precisar, consultar o video Representando Cores com CSS3 do canal Curso em Video para mais informações.</p>
+    <h2>Imagem da seleção de uma paleta que gostei</h2>
+    <img src="WhatsApp Image 2022-03-11 at 14.42.15.jpeg" alt="" width="1600px">
+    
+</body>
+</html>

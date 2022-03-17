@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis e Configurações Globais em CSS</title>
+</head>
+<body>
+    <h1>Variaveis</h1>
+        <p>Para facilitar a mudança de alguns parametros que aparecem diversas vezes em uma formatação CSS, é possivel colocar uma ou mais variaveis para esse parametro e quando houver necessidade, apenas mudar a variavel e o codigo todo mudará, por exemplo e provavelmente como é mais usado: cores do site. Dentro de um mesmo site, posso ter algumas cores e essas cores podem se repetir entre si dentro da formatação, um h1 pode ter tal cor, um h2 outra cor, mas pode ser que o body tenha a mesma cor do h1 e os paragrafos tenham a mesma cor do h2, enfim, para não ter que modificar as cores em todos as declarações em CSS caso seja preciso, é possivel a criação de variaveis que auxiliam nessa troca de cor, que é o exemplo que estou dando, mas pode ser usada para qualquer tipo de elemento, inclusive fontes.</p>
+        <p>Para adicionarmos variaveis ao documento CSS, pecisamos declarar uma pseudo-classe chamada root, que nada mais é do que a raiz do documento e dentro dessa pseudo-classe colocaremos as variaveis que devem começar com dois traços e serem nomeadas, sem espaço, de acordo com o que elas representarão, para ficar mais facil a organização. Após o nome, colocamos dois pontos e adicionamos o elemento da variavel, se for referente a uma cor, colocamos qual cor desejamos, se for um conjunto de fontes, colocamos as fontes que desejamos, enfim, as possibilidades são grandes, acompanhe o exemplo.</p>
+        <p>:root{
+            --cor0: #f2f2f2;
+            --cor1: #3061f2;
+            --cor2: #f20587;
+            --cor3: #ffffff;
+
+            --fonteh1: Arial, Verdana, Helvetica, sans-serif; 
+        }</p>
+        <p>E para adicionar a variavel à formatação, basta colocar, apos os dois pontos, a declaração, por exemplo: color: var(--onomedavariaveldesejada) ou font-family: var(--onomedavariaveldesejada) ou qualquer outra declaração com qualquer outra variavel criada no root do documento CSS</p>
+    <h1>Configurações Globais na CSS</h1>
+        <p>Para fazermos uma configuração global da CSS, como por exemplo, todos os elementos terão margem 0, padding 0, borda arredondada, enfim, qualquer modificação que desejamos que valha para todas as caixas do documento, basta criar uma declaração com o simbolo asterisco (*) no documento CSS da seguinte maneira e adicionar os comando desejados:  *{ aqui dentro os comando desejados}</p>
+        <p>*{ margin: 0px; padding: 0px; font-family: var(--fonteh1)}</p>
+</body>
+</html>

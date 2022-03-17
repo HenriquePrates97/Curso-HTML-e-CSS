@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1> Imagem dinâmica</h1>
+    <p>
+        Tente abrir este site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador
+    </p>
+    <picture>
+        <source media="(max-width: 725px)" srcset="ImagensPMG/foto-p.png" type="image/png">
+        <source media="(max-width: 1025px)" srcset="ImagensPMG/foto-m.png" type="image/png">
+        <img src="ImagensPMG/foto-g.png" alt="Imagem flexível">
+    </picture>
+    <p>
+        a tag picture é utilizada para abrir imagens que se ajustarão de acordo com a largura do navegador no usuário, onde utiliza-se a tag source 
+        para chamar as imagens menores, que devem ser chamadas quando o tamanho da largura da tela atingir determinado limite, no caso, esse limite
+        é determinado em media max-width colocando ao lado dos dois pontos o valor maximo em pixels que a largura deve ter para mostrar determinada
+        imagem. Dentro da tag img fica a imagem bruta, no tamanho maior desejado para mostrar ao usuario. Dentro do parametro srcset é colocado 
+        o nome da imagem a ser mostrada, o atalho ctrl + espaço não funciona para selecionar a fonte de imagem nesse caso, é necessário escrever
+        normalmente.
+    </p>
+    <h1>Reproduzindo Áudio</h1>
+    <p>
+        Vamos apender a reproduzir áudios em HTML5
+    </p>
+    <audio src="midia/WhatsApp Ptt 2022-03-08 at 11.15.43.mp3" autoplay controls loop></audio>
+
+    <audio preload="metadata" controls loop>
+        <source src="midia/WhatsApp Ptt 2022-03-08 at 11.15.43.mp3" type="audio/mpeg">
+    </audio>
+    <p>
+        para adicionar uma música supimpa ao seu site, existem duas maneiras. A primeira seria utilizando a tag audio /audio onde dentro de src seria
+        colocada a fonte do audio, alguns parametros como autoplay (para a musica começar a tocar automaticamente, mas pode não funcionar em todos
+        os navegadores), controls para aparecer o layout de controle do som, com botão de play, pause, volume... e o paremtro loop para o som tocar
+        em loop assim que acabar. a segunda maneira também utiliza a tag audio /audio porém não usamos o src que vem dentro da tag, e sim criamos
+        uma tag source dentro da tag audio /audio, como no exemplo acima. No parametro type colocamos o tipo de midia, como já vimos em aulas passadas,
+        nesse caso, o tipo da midia audio é audio/mpeg.
+    </p>
+    <h1>Reproduzindo Vídeos</h1>
+    <p>
+        para adicionar vídeos usamos a tag video para fazer isso, juntamente com o comando controls para aparecer os menus de play e pause assim como fazemos na inserção de audio.
+    </p>
+    <video src="midia/y2meta.com-Chicote Beto Carrero-(1080p).mp4" width="300" controls></video>
+    <video src="midia/ele é viado ele é bichinha e também ele é gay https___t.co_m6UhepzB1M.mp4" width="300" controls></video>
+
+    <p>o correto é sempre colocarmos no site o maior numero de extensões possiveis para que o usuario não tenha probelma de compatibilidade se o navegador não suportar determinado tipo de video.</p>
+    <p>para isso, abrimos a tag video e dentro dela colocamos uma source com todos os formatos possiveis, dando preferencia para o formato com o menos tamanho primeiro, e ao final um paragrafo para exibir uma mensagem caso o navegador não seja compativel com nenhum tipo de formato. O comando controls, witdh, e outros ficam junto à tag video.</p>
+    <p>para colocar um thumbnail no vídeo no site, usa-se o comando poster juntamente com o caminho da imagem, farei um exemplo abaixo</p>
+    <video controls width="500" poster="midia/global-connections.jpg">
+        <source src="midia/ele é viado ele é bichinha e também ele é gay https___t.co_m6UhepzB1M.mp4" type="video/mp4">
+        <source src="midia/ele é viado ele é bichinha e também ele é gay https_t.co_m6UhepzB1M (video-converter.com).webm" type="video/webm">
+        <p>Infelizmente seu navegador não suporta os formatos disponíveis para o vídeo.</p>
+    </video>
+    <p>Usar videos hospedados no proprio site consome muito trafego de dados o que pode se tornar caro ao longo do tempo,<br> o mais viavel seria fazer o upload do video no YouTube e adicionar ao codigo depois, <br> deixando ele hospedado lá no YouTube e assim não consumindo trafego de dados do site</p>
+    <h1>Inserindo vídeos do YouTube</h1>
+    <p>Para inserir um vídeo do YouTube ao código, apenas precisamos do vídeo upado no YouTube, abrimos o vídeo e vamos até a opção compartilhar,<br> escolhemos a opção incorporar e o próprio YouTUbe irá criar um código html para adicionarmos ao nosso, sem necessidade de criação de tag alguma. veja como ficou no exemplo abaixo</p>
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4aTCBNUCvv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <p>o procedimento para colocar vídeos do vímeo é o mesmo, contudo, o vimeo tem uma qualidade superior de imagem, mas o algoritmo dele não é muito bom, o video pode dar uma travadinha</p>
+
+</body>
+</html>
