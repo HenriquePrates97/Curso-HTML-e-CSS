@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png'); 
+            background-size: 100px 100px;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+        div.bgposition{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        div#q1{
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
+            background-position: left top;
+        }
+        div#q2{
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+        div#q3{
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+        }
+        div#q4{
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+        div#q5{
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        div#q6{
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+        div#q7{
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
+            background-position: right top;
+        }
+        div#q8{
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+        div#q9{
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+    </style>
+    <title>Personalizando Fundos</title>
+</head>
+<body>
+    <h1>Inserindo imagens de fundo e suas propriedades</h1>
+        <p>Para fazermos a inserção de uma imagem de fundo, seja essa imagem local ou na web, utilizamos o comando background-image e, entre aspas simples ou dulpas, dentro de url() digitamos o caminho dessa imagem corretamente, se for uma imagem externa, da web, colocamos o url dela completinho, juntamente com o http://.</p>
+    <h2>Propriedades</h2>
+        <p>O comando background-image possui algumas propriedades que são possiveis de alterar. Para melhor compreensão, precisamos entender que por padrão, a imagem adicionada que não houver nenhuma propriedade alterada virá no tamanho original e será repitida várias vezes para preencher o espaço da página, para muda isso, podemos alterar alguns paramentros</p>
+    <h3>Tamanho</h3>
+        <p>Para alterarmos o tamanho da imagem, usamos o parametro backgroud-size: px px; sendo o primeiro número a largura da imagem e o segundo a altura.</p>
+    <h3>Repetição</h3>
+        <p>Como mencionado antes, por padrão a imagem se repete para preencher a página completamente, caso não seja desejado essa repetição, basta usar o comando background-repeat: no-repeat; que a imagem permenecerá única e ficará posicionada no canto superior esquerdo por padrão, também sendo possivel alterar essa posição.</p>
+    <h3>Repetição no eixo X</h3>
+        <p>Caso seja necessária uma repetição apenas no eixo X, ou seja, na horizontal, utilizamos o mesmo comando para a retirar a repetição, background-repeat, mas utilizamos o parametro repeat-x, ficando assim: background-repeat: repeat-x;</p>
+    <h3>Repetição no eixo Y</h3>
+        <p>Para que a repetição ocorra apenas no eixo Y, ou seja, na vertical, utilizamos o mesmo método do eixo X, porém, obviamente alteraremos o parametro repeat-x para repeat-y, ficando assim: background-repeat: repeat-y;</p>
+    <h3>Posição do fundo</h3>
+        <p>Como dito anteriormente, é possivel alterar a posição padrão da imagem e isso é um grande divisor de águas em um site. Existe uma lógica por trás dessa forma de posicionar a imagem de fundo, é muito importante entender essa lógica para uma correta aplicação do parametro. Vamos lá: para mudarmos a posição da imagem de fundo, utilizamos o paramtro background-position e alteramos as seguintes caracteristicas: se a imagem ficará no topo à esquerda, que é o padrão, se ela ficará à esquerda centralizada, se ela ficara embaixo à esquerda. Para cenralizar a imagem totalmente, utilizamos center center no parametro. Centro topo e centro embaixo também são posições válidas. Topo à direita, centralizado à direita e embaixo à direita são as opções do lado direito da pagina, para ficar mais fácil o entendimento, farei uns exemplos abaixo. Sempre lembrando que o utilizamos dois comandos para o parametro que não são separados por virgula, o primeiro refere-se à esquerda ou direta ou centro e o segundo refere-se à topo, centro ou embaixo.</p>
+        <div class="bgposition" id="q1"></div>
+        <div class="bgposition" id="q2"></div>
+        <div class="bgposition" id="q3"></div><br>
+        <div class="bgposition" id="q4"></div>
+        <div class="bgposition" id="q5"></div>
+        <div class="bgposition" id="q6"></div><br>
+        <div class="bgposition" id="q7"></div>
+        <div class="bgposition" id="q8"></div>
+        <div class="bgposition" id="q9"></div>
+        
+
+</body>
+</html>
