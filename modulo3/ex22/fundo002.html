@@ -15,6 +15,8 @@
             <p>O comando background-image possui algumas propriedades que são possiveis de alterar. Para melhor compreensão, precisamos entender que por padrão, a imagem adicionada que não houver nenhuma propriedade alterada virá no tamanho original e será repitida várias vezes para preencher o espaço da página, para muda isso, podemos alterar alguns paramentros</p>
         <h3>Tamanho</h3>
             <p>Para alterarmos o tamanho da imagem, usamos o parametro backgroud-size: px px; ou em vez de px pode ser utilizado porcentagem, sendo o primeiro número a largura da imagem e o segundo a altura. Mas também existem alguns outros parametros possiveis de serem atribuidos ao background-size, como por exemplo o parametro auto, ondo o navegador vai arrumar a imagem automaticamente para ser exibida, o parametro contain, que mostrará a imagem por em seu tamanho completo, mas não é muito versátil, pois dependendo da altura ou larguda do navegador pode ser que o background seja mostrado, e a ultima e que talvez seja a mais interessante é a cover, onde o navegador corta a imagem em determinadas partes para que ela possa cobrir o fundo do site independente da altura e largura da janela do navegador.</p>
+        <h3>Fixar a imagem de fundo</h3>
+            <p>É posivel fazer a fixação da imagem de fundo para que o conteúdo da página se mova independente do fundo, assim como feito no exemplo dessa página, para isso, utilizamos o parametro background-attachment, ele será fixed para deixar fixo, caso seja necessário que ele acompanhe a rolagem do site, só deixar scroll, que no caso é o padrão.</p>
         <h3>Repetição</h3>
             <p>Como mencionado antes, por padrão a imagem se repete para preencher a página completamente, caso não seja desejado essa repetição, basta usar o comando background-repeat: no-repeat; que a imagem permenecerá única e ficará posicionada no canto superior esquerdo por padrão, também sendo possivel alterar essa posição.</p>
         <h3>Repetição no eixo X</h3>
@@ -32,6 +34,16 @@
                 <div class="bgposition" id="q7"></div>
                 <div class="bgposition" id="q8"></div>
                 <div class="bgposition" id="q9"></div>
+        <h3>Shorthand para o parametro de backgroud</h3>
+            <p>Para que possamos concatenar todas a informações disponiveis no parametro background, podemos utilizar uma shorthand, isso é, uma diminuição dos códigos para uma única linha, mas tendo cuidado para seguir a ordem respectiva de cada item, sendo o primeiro a color, o segundo a image, o terceiro o position, o quarto o repeat, o quinto o size (apesar de estar descrito na regra do W3C que pode ser feito assim, o size a principio ainda não está sendo possivel usar na shorthand, sendo necessário colocar uma declaração pra ele separado) e por ultimo o attachment.</p>
+        <h2>Centralização de caixas</h2>
+            <p>Para centralizar horizontalmente uma caixa, basta adicionar uma margem automatica à ela, ou seja, margin: auto; no código css, mas caso seja necessária uma centralização vertical, utilizamos o seguinte método: colocamos uma caixa dentro de outra, ou seja, o que vamos centralizar necessariamente precisa estar dentro de uma caixa; declaramos no código que essa caixa de fora, que geralmente damos o nome de container no id, terá uma posição relativa. Definimos um tamanho de altura e largura, tanto pra caixa de fora quanto pra caixa de dentro; já a posição da caixa de dentro será absoluta (igual a Stefanny). Quando definimos uma posição absoluta para uma caixa, temos a possibilidade de mexer em duas propriedades, a left e a top, que para uma centralização geralmente utilizamos porcentagem para determinar um número, ficando, por exemplo, left: 50%; e top: 50%;. Esses dois parametros levam em consideração o angulo da esquerda superior para aplicar a posição, o que acaba não deixando realmente centralizada a nossa caixa. Para resolver isso, caso seja necessario, utilizamos o parametro de transformação, e alteramos a translação da caixa para valores negativos, fazendo com que a caixa se mova no sentido contrário. Fica mais fácil de entender fazendo um exemplo.</p>
+            <section id="container">
+                <article id="conteudo">
+
+                </article>
+            </section>
+
     </main>
 </body>
 </html>
