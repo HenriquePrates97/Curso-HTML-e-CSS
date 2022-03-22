@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'brasilero';
+    src: url('fonts/Brasilero2018Free.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Passion One';
+    src: url('fonts/PassionOne-Bold.ttf') format('truetype');
+}
+*{
+    margin:0px;
+}
+
+:root{
+    --corfonte: #261201;
+    --corfundo: #f2c48d;
+    --marrom:   #731702;
+    --bege:     #f28f79;
+    --vermelho: #bf1f1f;
+
+    --texto: 'brasilero', sans-serif;
+    --titulo: 'Passion One', cursive;
+}
+body{
+    background-color: var(--corfundo);
+}
+header{
+    background-color: var(--corfonte);
+    min-height: 200px;
+    padding-top: 55px;
+    margin-bottom: 100px;
+}
+header h1{
+    font-family: var(--titulo);
+    color: var(--vermelho);
+    text-align: center;
+    font-size: 7em;
+}
+header p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--corfundo);
+    text-align: center;
+    font-size: 1.2em;
+}
+main article {
+    max-width: 500px;
+    font-family: var(--texto);
+    color: var(--corfonte);
+    font-size: 3em;
+    line-height: 80px ;
+    padding-left: 30px;
+}
