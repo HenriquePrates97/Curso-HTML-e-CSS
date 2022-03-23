@@ -30,26 +30,22 @@ a{
     color: var(--vermelho);
     text-decoration: none;
     font-weight: bolder;
-    transition-duration: 0.5s;
     
 }
 a:hover{
     text-decoration: underline;
-    background-color: var(--bege);
-    box-shadow: 0px 0px 8px 6px var(--bege);
 }
 header{
     font-variant: small-caps;
     background-color: var(--corfonte);
     min-height: 200px;
     padding-top: 55px;
-    margin-bottom: 100px;
 }
 header h1{
     font-family: var(--titulo);
     color: var(--vermelho);
     text-align: center;
-    font-size: 7em;
+    font-size: 10vw;
 }
 header p{
     font-family: Arial, Helvetica, sans-serif;
@@ -60,25 +56,42 @@ header p{
 section{
     font-family: var(--texto);
     color: var(--corfonte);
-    font-size: 2em;
-    line-height: 2em ;
+    font-size: 3.5vw;
+    line-height: 2em;
     padding-left: 30px;
     padding-top: 10vh;
     padding-bottom: 10vh;
+}
+section > p{
+    padding-bottom: 2em;
 }
 section.normal{
     background-color: var(--corfundo);
 }
 section.imagem{
     background-color: var(--marrom);
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.493);
 }
-section.normal > p{
-    max-width: 400px;
-}
+
 section.imagem > p {
-    max-width: 400px;
-    background-color: var(--corfonte);
+    display: inline-block;
+    background-color: #2612019a;
     color: var(--corfundo);
+    
+}
+section#img01{
+    background-image: url('imagens/cordel.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section#img02{
+    background-image: url('imagens/literatura-de-cordel.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 footer{
     text-align: center;
