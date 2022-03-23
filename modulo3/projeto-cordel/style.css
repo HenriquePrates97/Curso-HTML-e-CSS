@@ -9,6 +9,7 @@
 }
 *{
     margin:0px;
+    padding: 0px;
 }
 
 :root{
@@ -21,10 +22,24 @@
     --texto: 'brasilero', sans-serif;
     --titulo: 'Passion One', cursive;
 }
-body{
+html, body{
+    min-height: 100vh;
     background-color: var(--corfundo);
 }
+a{
+    color: var(--vermelho);
+    text-decoration: none;
+    font-weight: bolder;
+    transition-duration: 0.5s;
+    
+}
+a:hover{
+    text-decoration: underline;
+    background-color: var(--bege);
+    box-shadow: 0px 0px 8px 6px var(--bege);
+}
 header{
+    font-variant: small-caps;
     background-color: var(--corfonte);
     min-height: 200px;
     padding-top: 55px;
@@ -42,11 +57,31 @@ header p{
     text-align: center;
     font-size: 1.2em;
 }
-main article {
-    max-width: 500px;
+section{
     font-family: var(--texto);
     color: var(--corfonte);
-    font-size: 3em;
-    line-height: 80px ;
+    font-size: 2em;
+    line-height: 2em ;
     padding-left: 30px;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+section.normal{
+    background-color: var(--corfundo);
+}
+section.imagem{
+    background-color: var(--marrom);
+}
+section.normal > p{
+    max-width: 400px;
+}
+section.imagem > p {
+    max-width: 400px;
+    background-color: var(--corfonte);
+    color: var(--corfundo);
+}
+footer{
+    text-align: center;
+    color: var(--corfundo);
+    background-color: var(--corfonte);
 }
