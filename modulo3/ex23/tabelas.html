@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html{
+            background-image: url('https://i.pinimg.com/originals/56/7a/dc/567adc99bf754e9cf82107e77d463d52.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        body{
+            color: white;
+            max-width: 800px;
+            margin: 0 auto;   
+        }
+        table{
+            position: relative;
+            width: 400px;
+            min-height: 20px;
+            border-collapse: collapse;
+        }
+        tr{
+            background-color: tomato;
+        }
+        td, tr, th{
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            vertical-align: top;
+        }
+        td.num{
+            text-align: right;
+        }
+        tbody tr:nth-child(2n+1){
+            background-color: purple;
+        }
+         thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: tomato;
+        }
+    </style>
+    <title>Tabelas</title>
+</head>
+<body>
+    <h1>Minha primeira tabela</h1>
+    <h2>Hierarquia de tabelas simples</h2>
+        <p>Todas as tabelas simples seguem uma hierarquia. Para declarar uma tabela em HTML utilizamos a tag table, e dentro da tag declaramos os outros itens seguindo a hierarquia que começa pela linha, determinada pela tag tr (table row). Dentro de cada linha podemos ter um cabeçalho utilizando a tag th (table header) e também o objeto principal de uma tabela que são os dados, representados pela tag td (table data). Esses dois, obrigatóriamente dentro da tag tr que por sua vez está dentro da tag table.</p>
+    <h2>Alinhamento de dados na célula</h2>
+        <p>Para alinharmos um dado dentro da célula, utilizamos o comando text-align em css para alinharmos horizontalmente o dado, para fazer o alinhamento vertical, utilizamos a tag vertical-align, onde podemos usar top para cima, bottom para baixo e middle para o meio, que é o padrão.</p>
+    <table>
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>B4</td>
+            <td>C4</td>
+        </tr>
+    </table>
+
+    <h2>Tabelas mais complexas</h2>
+        <p>Para construirmos tabelas mais complexas utilizamos o conceito de cabeça, corpo e pé, isto é, damos uma certa anatomia à nossa tabela para que fique mais simples de montarmos uma tabela com mais elementos</p>
+        <p>Para isso, as tags usadas são table, onde assim como nas tabelas mais simples a tabela será declarada; a tag thead que nada mais é do que a cabeça da tabela; a tag tbody que é o corpo da tabela e a tag tfoot que é o pé da tabela. E dentro de cada uma dessas tags também temos algumas outras tags para complementar a tabela, que são tr (table row), td (table data) e th (table head, essa tag refere-se à cabeça da célula e não da tabela em si, não confundir com thead)</p>
+        <p>Para darmos uma especie de título à nossa tabela, algo que indique ao que a tabela se refere, utilizamos a tag caption, sem a necessidade de outra tag para complementar, apenas precisa estar dentro de table. Escrevemos o titulo da tabela e pronto, vide exemplo. A tag caption pode estar em qualquer lugar dentro de table e mesmo assim será posicionada logo acima da tabela.</p>
+        <p>Para facilitar aos buscadores de internet analizarem os dados da nossa tabela, podemos adicionar dentro da tag de titulo da celula, ou seja, dentro do maior/menor de th, um escopo, que nada mais é que a posição de onde estão os dados que completam esse titulo, no exemplo abaixo, os dados do th estado estão abaixo, sendo assim, o escopo está na mesma coluna do th, então colocamos scope="col" (col de column em ingles). Já no caso do th habitantes, os dados estão logo ao lado, ou seja, na mesma linha, então, usamos a mesma scope porém adicionamos row (linha em ingles) no lugar de col, ficando scope="row"</p>
+    <h2>Parêmetro position: sticky</h2>
+        <p>Para deixarmos a cabeça da tabela, onde estão os informações dos dados da tabela, utilizamos o parametro position:sticky para grudarmos a cabeça da tabela à tabela, sendo assim quando rolamos a tela pra baixo e a tabela sobe muito ocultando as informações da cabeça ela já não sobe mais. Deixamos a tabela com posição relativa, e isso é obrigatório e selecionamos a cabeça que desejamos deixar grudada com position: sticky. Adicionamos o parametro top para selecionarmos a posição que será usada para grudar essa cabeça e deixamos o background-color igual ao da cabeça porque no momento da rolagem o background-color não continua junto. Vide exemplo.</p>
+    <h3>Faremos um exemplo abaixo para ilustrar melhor esse conceito</h3>
+    <table>
+        <caption>Tabela das unidades federativas de acordo com a população de 2021</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">46 649 132</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 411 923</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17 463 349</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 985 284</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 597 484</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 466 630</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9 674 793</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">9 240 580</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8 777 124</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7 338 473</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 206 589</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">7 153 262</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">4 269 995</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">4 108 508</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">4 059 905</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3 567 234</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3 560 903</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3 365 351</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3 289 290</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">3 094 325</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2 839 188</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2 338 474</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1 815 278</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1 607 363</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">906 876</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">877 613</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">652 713</td>
+            </tr>       
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de habitantes</th>
+                <td class="num">0000</td>
+            </tr>
+        </tfoot>
+    </table>
+    <h2>Pseudo-classe nth-child</h2>
+        <p>A Pseudo-classe nth-child é utilizada para conserguirmos acessar um item especifico ou vários itens dentro de uma tag. Por exemplo, nesse código acima, utilizamos a pseu-classe para acessar cara linha de tabela dentro do corpo da tabela e assim fazer uma estilização especifica apenas dos itens desejados, como no caso do exemplo, para fazermos um efeito zebrado.</p>
+        <p>O objetivo dessa pseudo-classe é tranquilo de entender, como já falei, a utilizamos para selecionar itens em posições especificas dentro do código, mas o que realmente confunde é a forma de declarar essa posição, que fica dentro de parenteses após a declaração nth-child(). Devemos salientar que: a contagem dos itens tem por padrão a base 1, ou seja, o primeiro item da lista que desejamos acessar é o item 1, o segundo é o item 2 e assim sucessivamente. Já na expressão declarada dentro de parenteses na pseudo-classe a base do n é 0, explicarei melhor no próximo tópico.</p>
+        <p>Dentro dos parenteses, podemos colocar odd ou even, que em inglês quer dizer impar ou par, assim os itens que estiverem em posições impares poderão receber uma estilisação diferente daqueles que estiverem em posições pares. Além disso, podemos colocar uma expressão matemática dentro dos parenteses, fazendo formas mais precisas de selecionar um item, expressão essa que se dá por nth-child(an+b) onde a é um número inteiro e b também (o b pode ser negativo também), e cada número tem uma função especifica. já n é o multiplicador, que nada mais é que o total de itens na lista, que começa em 0 e vai aumentando a cada posição do item. Não necessariamente precisamos escrever a expressão matematica para selecionarmos os itens, pode-se apenas colocar um número em a e selecionarmos os itens que correspondem àquele número, por exemplo, se eu coloco nth-child(3) eu digo que quero apenas o item 3 dessa lista.</p>
+        <p>No exemplo da tabela acima, a expressão foi nth-child(2n+1) que quer dizer: pegue o item 2 da lista, multiplique por n, que começa em 0, e some 1. Isso resulta na conta 2*0+1, que resulta em 1, ou seja o primeiro item será pego. A conta então continua automaticamente para pegar os próximos itens da lista. No exemplo desta tabela temos 27 dados que podem ser usados, então o n da conta ira aumentar por 26 vezes, visto que começa em 0. Para entendermos melhor farei outro exemplo com a mesma tabela. Sabendo que (2n+1) é igual a 1 então o primeiro item será selecionado, qual o proximo item? A equação continua com (2*1+1), porque n passa a ser 1 já que fizemos a conta anterior com 0. Então, o próximo item da lista que será selecionado é o resultado da conta (2*1+1) que é 3, sendo assim, pulamos o item 2 e selecionamos o item 3. Continuando, aumentamos mais uma vez o valor de n, pois já usamos o número 1 e o próximo número será 2, então a conta fica (2*2+1) que dá 5, ou seja, selecionaremos o quinto item da lista para estilizarmos também. E assim sucessivamente, criando o mesmo padrão que teriamos se escolhecemos a palavra odd, que são os número impares.</p>
+        <p>Vamos criar um exemplo mais complexo ainda para tentarmos fixar bem a questão de expressão matemática para a seleção dos itens em uma pseu-classe nth-child. Suponhamos que temos uma lista não ordenada com 30 itens onde eu desejo pegar o primeiro item, pular 5 itens e pegar o sexto, pular mais 5 itens e pegar o décimo segundo e assim sucessivamente, eu escrevo a seguinte expressão nth-child(6n+1). Se eu não quiser pegar o primeiro item, deixo o número b negativo, e  a conta continuará automaticamente sucessivamente até completar os 30 itens.</p>
+        <h2>Uma segunda forma de interpretar nth-child</h2>
+            <p>Neste <a href="https://www.youtube.com/watch?v=otLMxFZfbh4" target="_blank">vídeo</a> somos apresentados à duas maneiras de interpretar a expressão dentro de parenteses sem fazer a conta matemática. A primeira forma seria imaginar que a é o número de itens que iriamos separar em um bloco, ou seja, na expressão nth-child(2n+1)
+            iriamos separar os itens de 2 em 2, e b seria o número do item dentro desse bloco. Então essa expresão resultaria no primeiro item de cada bloco, se ficar confuso, assista ao vídeo</p>
+            <p>A segunda forma e a que particularmente é mais simples de entender é: com a expressão nth-child(2n+1) eu quero dizer "ande 2 itens na lista e volte 1 item, este será o item que quero", na expressão nth-child(5n-2) eu digo "ande 5 itens na lista e avance 2, esse é o item que eu quero" onde para b negativo eu digo avance e para b positivo eu digo volte.</p>
+        <h2>Mesclagem de células</h2>
+            <p>A mesclagem de célula se faz necessária quando temos um item que precise ocupar duas ou mais linhas ou colunas, ou seja, se eu tiver algum item faltando ou precise ocupar uma posição determinada, posso mesclar as células seja na linha ou na coluna para fazer isso. Utilizamos uma declaração dentro da própria tag tr que deve ser mesclada. colspan é para mesclagem em coluna, e o rowspan é para mesclagem de linhas. Entre as aspas duplas colocamos a quantidade de células que devem ser mescladas.</p>
+            <p>O d</p>
+            <table>
+                <tr>
+                    <td>A</td>
+                    <td colspan="2">B</td>
+                    
+                </tr>
+                <tr>
+                    <td rowspan="2">D</td>
+                    <td>E</td>
+                    <td rowspan="3">F</td>
+                </tr>
+                <tr>
+                    
+                    <td>H</td>
+                    
+                </tr>
+                <tr>
+                    <td>J</td>
+                    <td>K</td>
+                    
+                </tr>
+            </table>
+</body>
+</html>
