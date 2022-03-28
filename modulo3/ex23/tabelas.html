@@ -16,6 +16,12 @@
             max-width: 800px;
             margin: 0 auto;   
         }
+        a{
+            color: white;
+        }
+        a:hover{
+            color: aqua;
+        }
         table{
             position: relative;
             width: 400px;
@@ -79,6 +85,7 @@
         <p>Para isso, as tags usadas são table, onde assim como nas tabelas mais simples a tabela será declarada; a tag thead que nada mais é do que a cabeça da tabela; a tag tbody que é o corpo da tabela e a tag tfoot que é o pé da tabela. E dentro de cada uma dessas tags também temos algumas outras tags para complementar a tabela, que são tr (table row), td (table data) e th (table head, essa tag refere-se à cabeça da célula e não da tabela em si, não confundir com thead)</p>
         <p>Para darmos uma especie de título à nossa tabela, algo que indique ao que a tabela se refere, utilizamos a tag caption, sem a necessidade de outra tag para complementar, apenas precisa estar dentro de table. Escrevemos o titulo da tabela e pronto, vide exemplo. A tag caption pode estar em qualquer lugar dentro de table e mesmo assim será posicionada logo acima da tabela.</p>
         <p>Para facilitar aos buscadores de internet analizarem os dados da nossa tabela, podemos adicionar dentro da tag de titulo da celula, ou seja, dentro do maior/menor de th, um escopo, que nada mais é que a posição de onde estão os dados que completam esse titulo, no exemplo abaixo, os dados do th estado estão abaixo, sendo assim, o escopo está na mesma coluna do th, então colocamos scope="col" (col de column em ingles). Já no caso do th habitantes, os dados estão logo ao lado, ou seja, na mesma linha, então, usamos a mesma scope porém adicionamos row (linha em ingles) no lugar de col, ficando scope="row"</p>
+        <p>Caso a célula tenha sido mesclada e hajam dados para serem considerados, utilizamos outra forma de escrita para o escopo, caso a mescla tenha sido em coluna, utilizamos o colgroup e caso tenha sido em linha utilizamos rowgroup</p>
     <h2>Parêmetro position: sticky</h2>
         <p>Para deixarmos a cabeça da tabela, onde estão os informações dos dados da tabela, utilizamos o parametro position:sticky para grudarmos a cabeça da tabela à tabela, sendo assim quando rolamos a tela pra baixo e a tabela sobe muito ocultando as informações da cabeça ela já não sobe mais. Deixamos a tabela com posição relativa, e isso é obrigatório e selecionamos a cabeça que desejamos deixar grudada com position: sticky. Adicionamos o parametro top para selecionarmos a posição que será usada para grudar essa cabeça e deixamos o background-color igual ao da cabeça porque no momento da rolagem o background-color não continua junto. Vide exemplo.</p>
     <h3>Faremos um exemplo abaixo para ilustrar melhor esse conceito</h3>
@@ -242,5 +249,9 @@
                     
                 </tr>
             </table>
+        <h2>Tag colgroup para edição de colunas</h2>
+            <p>Para que tenhamos uma maior facilidade de editarmos uma coluna inteira na tabela, o HTML 5 introduziu uma nova tag chamada colgroup, onde podemos determinar quantas colunas há na tabela e adicionarmos uma edição CSS de forma mais simplificada.</p>
+            <p>Para a utilização dessa nova ferramente, dentro da tag table abrimos a tag colgroup e fechamos normalmente como qualquer outra tag, dentro dela, abrimos outra tag chamada apenas de col e não tendo a necessidade de fechar. A quantidade de tags col dentro de colgroup determina o número de colunas na tabela. Sendo assim, podemos adicionar uma classe a cada coluna e editarmos ela por inteiro. Caso haja uma coluna mesclada e a estilização de uma coluna valha para duas ou mais, utilizamos dentro de col o parametro span e adicionamos entre aspas duplas a quantidade de colunas desejadas para expandir essa estilização, podendo ser excluida a col que corresponde a coluna que será expandida. Vide exemplo na <a href="tabelaColgroup.html">próxima página</a></p>
+            
 </body>
 </html>
