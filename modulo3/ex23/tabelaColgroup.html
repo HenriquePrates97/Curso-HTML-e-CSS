@@ -11,6 +11,9 @@
         a:hover{
             color: aqua;
         }
+        div#container{
+            overflow-x: auto;
+        }
         table{
             border-collapse: collapse;
         }
@@ -33,61 +36,69 @@
     <title>Tabela com Colgroup</title>
 </head>
 <body>
-    <table>
-        <caption>Tabela com colgroup</caption>
-            <colgroup>
-                <col class="nome">
-                <col class="data">
-                <col class="dev"> 
-                <col class="pub" span="2">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th>Nome do Jogo</th>
-                    <th>Data de Lançamento</th>
-                    <th>Desenvolvedora</th>
-                    <th>Publicadora</th>
-                    <th>Nota no Metacritic</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>SOTC</td>
-                    <td>00/00/0000</td>
-                    <td>Não sei</td>
-                    <td>Não faço idéia</td>
-                    <td>Muito alta</td>
-                </tr>
-                <tr>
-                    <td>SOTC</td>
-                    <td>00/00/0000</td>
-                    <td>Não sei</td>
-                    <td>Não faço idéia</td>
-                    <td>Muito alta</td>
-                </tr>
-                <tr>
-                    <td>SOTC</td>
-                    <td>00/00/0000</td>
-                    <td>Não sei</td>
-                    <td>Não faço idéia</td>
-                    <td>Muito alta</td>
-                </tr>
-                <tr>
-                    <td>SOTC</td>
-                    <td>00/00/0000</td>
-                    <td>Não sei</td>
-                    <td>Não faço idéia</td>
-                    <td>Muito alta</td>
-                </tr>
-                <tr>
-                    <td>SOTC</td>
-                    <td>00/00/0000</td>
-                    <td>Não sei</td>
-                    <td>Não faço idéia</td>
-                    <td>Muito alta</td>
-                </tr>
-            </tbody>
-    </table>
+    <div id="container">
+        <table>
+            <caption>Tabela com colgroup</caption>
+                <colgroup>
+                    <col class="nome">
+                    <col class="data">
+                    <col class="dev">
+                    <col class="pub" span="2">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Nome do Jogo</th>
+                        <th>Data de Lançamento</th>
+                        <th>Desenvolvedora</th>
+                        <th>Publicadora</th>
+                        <th>Nota no Metacritic</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SOTC</td>
+                        <td>00/00/0000</td>
+                        <td>Não sei</td>
+                        <td>Não faço idéia</td>
+                        <td>Muito alta</td>
+                    </tr>
+                    <tr>
+                        <td>SOTC</td>
+                        <td>00/00/0000</td>
+                        <td>Não sei</td>
+                        <td>Não faço idéia</td>
+                        <td>Muito alta</td>
+                    </tr>
+                    <tr>
+                        <td>SOTC</td>
+                        <td>00/00/0000</td>
+                        <td>Não sei</td>
+                        <td>Não faço idéia</td>
+                        <td>Muito alta</td>
+                    </tr>
+                    <tr>
+                        <td>SOTC</td>
+                        <td>00/00/0000</td>
+                        <td>Não sei</td>
+                        <td>Não faço idéia</td>
+                        <td>Muito alta</td>
+                    </tr>
+                    <tr>
+                        <td>SOTC</td>
+                        <td>00/00/0000</td>
+                        <td>Não sei</td>
+                        <td>Não faço idéia</td>
+                        <td>Muito alta</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="5">Diminua a largura da tela para ver o overflow</th>
+                    </tr>
+                </tfoot>
+        </table>
+    </div>
+    
     <h1><a href="tabelas.html">Voltar</a></h1>
 </body>
 </html>
