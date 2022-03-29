@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        section{
+            display: flex;
+            flex-direction: row;
+            border: 2px solid black;
+            max-width: 600px;
+            padding: 10px;
+            margin: 15px auto;
+            justify-content: space-between;
+        }
+        div{
+            margin: 5px;
+            background-color: aqua;
+            text-align: center;
+            flex-grow: 1;
+            }
+        .container{
+            display: flex;
+            flex-direction: column;
+            min-height: 500px;
+        }
+    </style>
+    <title>Praticando Flex Box</title>
+</head>
+<body>
+    <h1>Vamos praticar um pouco dos conceitos de flex box</h1>
+    <section>
+        <div>Teste 1</div>
+        <div>Teste 2</div>
+        <div>Teste 3</div>
+        <div>Teste 4</div>
+    </section>
+    <h1>Dentro do container</h1>
+    <section class="container">
+        <div>display-flex</div>
+        <div>flex-direction</div>
+        <div>flex-wrap</div>
+        <div>flex-flow</div>
+        <div>justify-content</div>
+        <div>align-items</div>
+        <div>align-content</div>
+    </section>
+</body>
+</html>
