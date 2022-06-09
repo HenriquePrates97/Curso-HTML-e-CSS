@@ -25,5 +25,10 @@
         <p>Também é possível alterar as configurações de altura e largura utilizando CSS, que acabam se sobrepondo ao que está como parâmetro, basta apenas adicionar o nome da tag na CSS e fazer a alteração como qualquer outra tag em HTML, só lembrando, as CSS são soberanas, tudo que estiver como parâmetro na tag será desconsiderado.</p>
         <p>Existe também um parâmetro chamado scrolling, que é utilizado para permitir ou não a rolagem da página que está dentro do iframe, caso essa página seja grande o suficiente para criar uma barra de rolagem, no iframe acima deixei o parametro em "no" (não em inglês), para bloquear a rolagem da página, as outra opções dessa parâmetro são o auto, onde o iframe decide se é necessário ou não a rolagem, e o yes, onde o iframe cria uma barra de rolagem mesmo que a página caiba dentro do iframe e não precise rolar.</p>
         <p>O frameborder serve para indicar se o iframe terá borda visível ou não, sendo o valor 0 indicativo para sem borda e qualquer outro valor indicativo para borda visível. Também é possível estilizar a borda do iframe utilizando CSS</p>
+        <p>Para abrir dentro de um iframe uma página de um link da tag a, adicionamos ao iframe um name, definimos o target desse link, em vez de _blank, o name desse iframe no target.</p>
+        <p><a href="../modulo3/projeto-cordel/index.html" target="frame">Clique aqui</a> para ver o exemplo do paragráfo anterior</p>
+        <iframe src="" height="300px" width="500px" name="frame">
+            <p>Infelizmente o seu navegador não é compatível com este recurso.</p>
+        </iframe>
 </body>
 </html>
