@@ -30,5 +30,31 @@
         <iframe src="" height="300px" width="500px" name="frame">
             <p>Infelizmente o seu navegador não é compatível com este recurso.</p>
         </iframe>
+        <h2>Façamos um teste para usar os links dentro de iframes</h2>
+            <p>Vamos começar com uma lista simples, onde cada link da lista abrirá em um iframe</p>
+            <ul>
+                <li><a href="../modulo3/projeto-cordel/index.html" target="frame2">Clique aqui para ver a página do cordel</a></li>
+                <li><a href="../flexBox/flexBlog.html" target="frame2">Ou clique aqui para o flexblog</a></li>
+                <li><a href="../Módulo 1/Desafio do Módulo 2/index.html" target="frame2">Mas aqui também temos o projeto do android, clica aqui</a></li>
+            </ul>
+            <iframe srcdoc="<h1>Escolha uma das opções acima</h1><p>O código é exatamente como feito no documento HTML padrão, porém o código todo é feito um ao lado do outro e toda vez que precisamos usar aspas, elas deverão ser aspas simples" height="300px" width="500px" name="frame2">
+                <p>Infelizmente o seu navegador não é compatível com este recurso. (Essa mensagem aparecerá caso o navegador não tenha suporte a iframes)</p>
+            </iframe>
+            <p>É possível personalizar a página inicial do iframe utilziando código HTML, para que ao carregar um documento com iframe, ele já esteja preenchido com esse código. Utilizamos em vez de src="" normal, o parâmetro srcdoc="", e dentro deste parâmetro, colocamos o código HTML que queremos que apareça no inicio, antes de colocarmos um link no iframe. Veja o exemplo do iframe acima</p>
+
+    <h1>Vamos agora falar sobre algumas inconveniências dos iframes, pois nem tudo são flores</h1>
+        <h2>Problemas na indexação de conteúdo pelos sites buscadores</h2>
+            <p>Caso haja muitos iframes no seu site, pode ser que os bots de indexação dos sites de busca não entrem no conteúdo do iframe para avaliar a relevância desse conteúdo e assim decidir em que posição seu site aparecerá quando o usuário pesquisar por algum termo que remeta a seu site, fazendo com que ele não tenha um bom desempenho nas buscas e acaba ficando irrelevante. Por isso o mais aconselhado é utilizar iframes com moderação e não utilizar conteúdos mais importantes para o seu site dentro deles</p>
+        <h2>Acessibilidade e usabilidade</h2>
+            <p>Para pessoas que utilizam algum software para auxiliar na leitura da tela do computador o uso de iframe no site pode ser um inconveniente, pois esses softwares podem ter dificuldade em acessar as informações do iframe para fazer a leitura, assim como os própior navegadores que podem ter dificuldade de entender alguns comandos dados pelo usúario em relação ao iframe e acabar tornando a experiência não tão agradável assim</p>
+        <h2>Segurança</h2>
+            <p>Quando utilizamos um site de terceiros em nosso site atráves de um iframe, estamos dando passe livre para que esses sites façam parte do nosso conteúdo, e caso haja algum tipo de fraude ou golpe ocorrendo nesses site, ou até mesmo algum hacker invadiu este site e está utilizando ele para roubo de dados dos usuários, nosso site se torna mais uma porta de entrada para pessoas cairem nessas armadilhas e assim fazendo com que a segurança do nosso próprio site fique fragilizada.</p>
+            <p>E para conseguir deixar o site mais seguro, existem alguns parâmetros que podemos utilizar nos iframes para evitar que sites que estão sendo executados neles consigam efetuar algumas ações. Utilizamos o parametro sandbox="" para alterar as autorizações dos sites, como por exemplo rodas scripts, pegar informações de formulários, para negar todas as ações, escrevemos sandbox dentro das aspas, ficando assim: sandbox="sandbox". Dessa forma o site está um pouco mais seguro. Caso haja a necessidade de liberar algumas autorizações, há essa possibilidade, basta apertar control+espaço para verificar as opções disponiveis no parametro sandbox.</p>
+            <p>Outra forma de deixarmos o site mais seguro é evitar que os dados do usuário sejam coletados para elaboração de propagandas baseadas nas pesquisas desse usuário, para isso utilizamos o parametro referrerpolicy="" com a configuração no-referrer, assim, nenhum dado será utilizado pelo site que está sendo executado no iframe.</p>
+    <h1>Utilizando incorporação de iframes</h1>
+        <h2>Mapa do google</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3555.0184855736748!2d-48.62775844886269!3d-26.997965003185865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8b6133da04285%3A0x4773b9a7de0d95bb!2sR.%203104%2C%2010%20-%20Centro%2C%20Balne%C3%A1rio%20Cambori%C3%BA%20-%20SC%2C%2088330-306!5e0!3m2!1spt-BR!2sbr!4v1658795238380!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h2>Vídeo do YouTube</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dzhJsc1YszU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>
