@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamos falar sobre formulários</title>
+</head>
+<body>
+    <p>Primeiro de tudo, todo formulário deve estar dentro da tag form, assim como toda tabela deve estar dentro da tag table, para que a semantica do HTML possa ser seguida a risca. Também é muito importante que haja uma ligação entre o campo destinado a inserção de informações e a etiqueta que o determina, ou seja, quando colocamos uma área para o usuário digitar seu nome, a instrução "Nome" deve ter uma ligação com a caixa de texto utilizada para digitar o nome, e isso é feito com o uso da tag label. O nome do campo a ser preenchido deve estar dentro da tag label, que terá o parametro for, dentro do parametro for, colocamos o id do input que escolhemos para essa seção. Um detalhe: para o for, apenas o id do input é reconhecido, o name do input não é reconhecido no for. Id serve para javascript e CSS e o name serve para PHP, isso falando de uma forma muito, mas muito simplista. Veja o exemplo abaixo para melhor entendimento.</p>
+
+    <form action="cadastro.php"> <!--Em action vai o link do servidor que receberá o fomulário-->
+        <p>
+            <label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome">
+        </p>
+        <p>
+            <label for="isobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+        <input type="submit" value="Enviar">
+        <!--Para deixar um item embaixo do outro, basta adicionar tags em block, como um parágrafo ou uma div-->
+</form>
+</body>
+</html>
