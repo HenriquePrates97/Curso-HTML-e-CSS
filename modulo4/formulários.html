@@ -9,17 +9,32 @@
 <body>
     <p>Primeiro de tudo, todo formulário deve estar dentro da tag form, assim como toda tabela deve estar dentro da tag table, para que a semantica do HTML possa ser seguida a risca. Também é muito importante que haja uma ligação entre o campo destinado a inserção de informações e a etiqueta que o determina, ou seja, quando colocamos uma área para o usuário digitar seu nome, a instrução "Nome" deve ter uma ligação com a caixa de texto utilizada para digitar o nome, e isso é feito com o uso da tag label. O nome do campo a ser preenchido deve estar dentro da tag label, que terá o parametro for, dentro do parametro for, colocamos o id do input que escolhemos para essa seção. Um detalhe: para o for, apenas o id do input é reconhecido, o name do input não é reconhecido no for. Id serve para javascript e CSS e o name serve para PHP, isso falando de uma forma muito, mas muito simplista. Veja o exemplo abaixo para melhor entendimento.</p>
 
-    <form action="cadastro.php"> <!--Em action vai o link do servidor que receberá o fomulário-->
+    <form action="cadastro.php" method="get" autocomplete="on"> <!--Em action vai o link do servidor que receberá o fomulário-->
         <p>
             <label for="inome">Nome:</label>
-            <input type="text" name="nome" id="inome">
+            <input type="text" name="nome" id="inome" autocomplete="name" placeholder="Digite seu primeiro nome">
         </p>
         <p>
             <label for="isobrenome">Sobrenome:</label>
-            <input type="text" name="sobrenome" id="isobrenome">
+            <input type="text" name="sobrenome" id="isobrenome" placeholder="Digite seu sobrenome" value="Teste">
+        </p>
+        <p>
+            <label for="isen">Senha:</label>
+            <input type="password" name="sen" id="isen" autocomplete="current-password" placeholder="Digite uma senha forte">
         </p>
         <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
         <!--Para deixar um item embaixo do outro, basta adicionar tags em block, como um parágrafo ou uma div-->
-</form>
+    </form>
+    <h1>Método GET e POST</h1>
+        <p>Para declarar o atributo de método, dentro da tag form escrevemos method, e dentro das aspas colocamos o método que desejamos, assim como no exemplo acima. Quando não há uma declaração de método, o padrão é GET. O método GET compartilha na URL os dados do formulário, tornando assim um método fácil de ser compartilhado, mas não tão seguro assim, o GET também tem uma limitação de tamanho para envio de um formulário: a página do formulário não pode pesar mais que 3000 bites, mais ou menos o equivalente a 3000 letras. Já o método post, não tem limitação de peso, sendo mais indicado para enviar dados um pouco mais sensíveis e também é utilizado no envio de arquivos via formulário. Sobre a segurança: nenhum dos dois métodos é 100% seguro, sendo recomendado o estudo de HTTPS mais no futuro para saber sobre criptografia e segurança de dados. Em questão de velocidade de envio de dados, as duas formas são relativamente rápidas.</p>
+    <h1>Atributos importantes</h1>
+        <p>required é um atributo que torna o input obrigatório de ser preenchido</p>
+        <p>minlength="" e maxlength="" são atributos para delimitar a quantidade de caracteres em um input</p>
+        <p>placeholder="" é o que estará escrito dentro do input para auxiliar o usuário a preencher o campo</p>
+        <p>autocomplete="" é utilizado no form para ativar ou desativar a função de auto completar o campo. No form, o autocomplete só tem as opções ligado e desligado, mas se colocarmos o autocomplete no input, teremos várias outras opções para adicionar, isso ajuda o navegador a entender a qual campo está ligado o input, como por exemplo, se eu coloco o autocomplete="current-password" no imput de password, eu digo para o navegador que esse input é referente a senhas e se ele tiver alguma senha salva para auto completar, ele pode. Caso eu adicione o autocomplete="username" no input referente ao nome de usuário, eu indico ao navegador que se ele tiver algum nome já salvo para colocar no campo, ele pode auto completar.</p>
+        <p>min="" e max="", em um input do tipo number é possivel delimitar o menor número aceito e o maior número aceito dentro do input, utilizando min e max</p>
+        <p>step="", indica de quanto em quanto um input do tipo number irá aumentar, sendo assim, é possivel adicionar números com virgula, basta adicionar ao step um valor como por exemplo 0.5 que você pode colocar dentro da tag numeros inteiros ou numero com .5 no final, como 6.5 ou 9.5. Nesse caso, o step faz com que os número possam aumentar de meio em meio.</p>
+        <p>value é o valor que já estará digitado no campo do input, colocando um value para aparecer, o placeholder é sobreposto. Se o campo ficar vazio, o placeholder volta a aparecer</p>
 </body>
 </html>
