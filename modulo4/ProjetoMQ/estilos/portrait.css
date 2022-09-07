@@ -1,3 +1,8 @@
 @charset "UTF-8";
 
 /*Este é o CSS para ao modo retrato*/
+
+body{
+    background-image: url(../cev-portrait.jpg);
+    background-position: center bottom;
+}
