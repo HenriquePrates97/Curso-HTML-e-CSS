@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/tela.css" media="screen">
-    <link rel="stylesheet" href="estilos/impressora.css" media="print">
+    <link rel="stylesheet" href="estilos/impressora.css" media="print">    
     <title>Media Queries</title>
 </head>
 <body>
@@ -23,10 +23,12 @@
         <article>
             <h2>O que é media query?</h2>
                 <p>É uma técnologia de adaptação do conteúdo de um site para resoluções menores ou para outros tipos de utilização como impressão, por exemplo. São definidas através da estilização via CSS.</p>
+            <h3>Media Types</h3>
                 <p>É possível fazer links de CSS específico para cada situação que usaremos a estilização, como por exemplo, temos um link para quando o arquivo for impresso, e outro para o arquivo que será exibido normalmente no site. Em cada estilo, podemos modificar da forma que acharmos melhor para cada utilização, retirando conteúdos que não são relevantes na hora da impressão e mantendo esses mesmos conteúdo para a exibição no site, assim tendo uma estilização mais enxuta na hora de imprimir.</p>
-                <p>Para fazer essa distinção de utilização, juntamente ao link da CSS, utilizamos o parametro media="" e dentro dos parenteses colocamos o o valor desejado, neste caso, print é para impressão, e screen é para tela de exibição no site.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, nesciunt consectetur. Facilis tenetur nobis expedita similique saepe totam doloremque voluptatibus recusandae est. Eaque natus minus recusandae possimus sequi deserunt distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est nam dolores autem alias ipsum tempora vitae obcaecati, consequuntur doloremque reiciendis fuga culpa explicabo quis ab nemo, quo quae officiis ratione.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, voluptate, molestiae quos iusto nulla debitis tempore animi odio adipisci quas dicta nihil veritatis temporibus, iure modi ipsum in ipsam maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptate nam ipsum dignissimos ipsam, ad hic quas eligendi libero laborum obcaecati molestias quos reprehenderit esse nostrum aliquam, nulla aliquid qui? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium porro praesentium quam quo necessitatibus. Cum iusto enim in commodi, dolorum, adipisci inventore culpa officia ad eaque beatae omnis. Magnam, incidunt!</p>
+                <p>Para fazer essa distinção de utilização, juntamente ao link da CSS, utilizamos o parametro media="" e dentro dos parenteses colocamos o o valor desejado, neste caso, print é para impressão, e screen é para tela de exibição no site, all é para uma configuração geral, serve tanto para impressão, quanto para exibição.</p>
+            <h3>Media Features</h3>
+                <p>Assim como as media types, as media features servem para alterar a estilização em determinado tipo de situação. Uma das formas é selecionar uma media feature para atuar de acordo com a orientação da tela.</p>
+                <p>As media features são declaradas juntamente com as media types, dentro das aspas. Após a declaração da media type, escrevemos and e declaramos a media feature entre parenteses, ficando assim: media="screen and (orientation: landscape).</p>
         </article>
     </main>
 </body>

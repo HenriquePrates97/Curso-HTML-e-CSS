@@ -17,6 +17,9 @@ header > h1{
     padding: 15px;
     color: white;
 }
+h2,h3{
+    margin: 25px auto;
+}
 header ul{
     text-align: center;
     background-color: blueviolet;
